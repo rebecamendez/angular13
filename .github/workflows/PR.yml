@@ -1,0 +1,20 @@
+name: Run jobs on Pull Request
+
+on:
+  pull_request:
+
+jobs:
+  run_tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    container: node:lts-buster
+    steps:
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
