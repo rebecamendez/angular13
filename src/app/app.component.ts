@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular13';
+
+  constructor() {
+    this.sayHello();
+  }
+
+  public sayHello() {
+    console.log(`Hello ${this.title}`);
+  }
+
+  public sayGoodbye() {
+    console.log(`Hello ${this.title}`);
+  }
 }
